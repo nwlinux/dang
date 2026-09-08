@@ -1,25 +1,18 @@
 import Foundation
 import Combine
+import WidgetKit
 
 final class CounterStore: ObservableObject {
     @Published private(set) var counts: [String: Int]
 
-    private let defaults = UserDefaults.standard
-    private let storageKey = "dangCounts"
-
-    private static let dayFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.calendar = Calendar(identifier: .gregorian)
-        formatter.dateFormat = "yyyy-MM-dd"
-        return formatter
-    }()
+    private let defaults = DangCounterShared.sharedDefaults
 
     init() {
-        counts = defaults.dictionary(forKey: storageKey) as? [String: Int] ?? [:]
+        counts = defaults.dictionary(forKey: DangCounterShared.storageKey) as? [String: Int] ?? [:]
     }
 
     private var todayKey: String {
-        Self.dayFormatter.string(from: Date())
+        DangCounterShared.dayKey()
     }
 
     var todayCount: Int {
@@ -50,6 +43,7 @@ final class CounterStore: ObservableObject {
     }
 
     private func save() {
-        defaults.set(counts, forKey: storageKey)
+        defaults.set(counts, forKey: DangCounterShared.storageKey)
+        WidgetCenter.shared.reloadAllTimelines()
     }
 }

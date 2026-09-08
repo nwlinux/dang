@@ -11,6 +11,11 @@
 		BF0000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000002 /* ContentView.swift */; };
 		BF0000000000000000000003 /* CounterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000003 /* CounterStore.swift */; };
 		BF0000000000000000000004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000004 /* Assets.xcassets */; };
+		813E7AA1503587B22A1C3CF5 /* DangCounterShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A2D600C5D0637052468F83 /* DangCounterShared.swift */; };
+		949C1D35B80BDF31507AC28D /* DangCounterShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A2D600C5D0637052468F83 /* DangCounterShared.swift */; };
+		4F05280395D1A5D8C6FAC255 /* DangCounterWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF8C73158C7A10BD98535E /* DangCounterWidgetBundle.swift */; };
+		E486F8CC509362EBFCCE6D48 /* DangCounterWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEBC110DAA5AA3DA431BE61 /* DangCounterWidget.swift */; };
+		E09F747A3180546E1F658B68 /* DangCounterWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FC99C1E32D950A05E8974754 /* DangCounterWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeaderOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,10 +24,24 @@
 		FR0000000000000000000003 /* CounterStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterStore.swift; sourceTree = "<group>"; };
 		FR0000000000000000000004 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FR0000000000000000000005 /* DangCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DangCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		46ECD27B1DF601515F8D3FFB /* DangCounter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DangCounter.entitlements; sourceTree = "<group>"; };
+		C1A2D600C5D0637052468F83 /* DangCounterShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangCounterShared.swift; sourceTree = "<group>"; };
+		52CF8C73158C7A10BD98535E /* DangCounterWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangCounterWidgetBundle.swift; sourceTree = "<group>"; };
+		CDEBC110DAA5AA3DA431BE61 /* DangCounterWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangCounterWidget.swift; sourceTree = "<group>"; };
+		A21C0D720D2FC0C88E940EA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91A4169C389589ACE4FF044D /* DangCounterWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DangCounterWidget.entitlements; sourceTree = "<group>"; };
+		FC99C1E32D950A05E8974754 /* DangCounterWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DangCounterWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FBP000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC13E9B3CA07B00D97D0FB5D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +55,8 @@
 			isa = PBXGroup;
 			children = (
 				GR0000000000000000000002 /* DangCounter */,
+				AD779618227A08AB40E40EDF /* Shared */,
+				2A638241DA452F84D9A72D74 /* DangCounterWidget */,
 				GR0000000000000000000003 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,14 +68,35 @@
 				FR0000000000000000000002 /* ContentView.swift */,
 				FR0000000000000000000003 /* CounterStore.swift */,
 				FR0000000000000000000004 /* Assets.xcassets */,
+				46ECD27B1DF601515F8D3FFB /* DangCounter.entitlements */,
 			);
 			path = DangCounter;
+			sourceTree = "<group>";
+		};
+		AD779618227A08AB40E40EDF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C1A2D600C5D0637052468F83 /* DangCounterShared.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		2A638241DA452F84D9A72D74 /* DangCounterWidget */ = {
+			isa = PBXGroup;
+			children = (
+				52CF8C73158C7A10BD98535E /* DangCounterWidgetBundle.swift */,
+				CDEBC110DAA5AA3DA431BE61 /* DangCounterWidget.swift */,
+				A21C0D720D2FC0C88E940EA2 /* Info.plist */,
+				91A4169C389589ACE4FF044D /* DangCounterWidget.entitlements */,
+			);
+			path = DangCounterWidget;
 			sourceTree = "<group>";
 		};
 		GR0000000000000000000003 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				FR0000000000000000000005 /* DangCounter.app */,
+				FC99C1E32D950A05E8974754 /* DangCounterWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,15 +111,34 @@
 				SBP000000000000000000001 /* Sources */,
 				FBP000000000000000000001 /* Frameworks */,
 				RBP000000000000000000001 /* Resources */,
+				C99796A690E495D16CAF9194 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				242849470FC03CCBC4398678 /* PBXTargetDependency */,
 			);
 			name = DangCounter;
 			productName = DangCounter;
 			productReference = FR0000000000000000000005 /* DangCounter.app */;
 			productType = "com.apple.product-type.application";
+		};
+		6CBBD4D9FCA1CA72F39C89DA /* DangCounterWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B5DF7FE74B040812EC62C79 /* Build configuration list for PBXNativeTarget "DangCounterWidgetExtension" */;
+			buildPhases = (
+				35CFEA3FCCACF494A4954098 /* Sources */,
+				FC13E9B3CA07B00D97D0FB5D /* Frameworks */,
+				59E2D235FAC2D378B727A0E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DangCounterWidgetExtension;
+			productName = DangCounterWidgetExtension;
+			productReference = FC99C1E32D950A05E8974754 /* DangCounterWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -91,6 +152,19 @@
 				TargetAttributes = {
 					TG0000000000000000000001 = {
 						CreatedOnToolsVersion = 15.2;
+						SystemCapabilities = {
+							"com.apple.ApplicationGroups.iOS" = {
+								enabled = 1;
+							};
+						};
+					};
+					6CBBD4D9FCA1CA72F39C89DA = {
+						CreatedOnToolsVersion = 15.2;
+						SystemCapabilities = {
+							"com.apple.ApplicationGroups.iOS" = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -108,6 +182,7 @@
 			projectRoot = "";
 			targets = (
 				TG0000000000000000000001 /* DangCounter */,
+				6CBBD4D9FCA1CA72F39C89DA /* DangCounterWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -121,6 +196,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		59E2D235FAC2D378B727A0E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -131,10 +213,53 @@
 				BF0000000000000000000001 /* DangCounterApp.swift in Sources */,
 				BF0000000000000000000002 /* ContentView.swift in Sources */,
 				BF0000000000000000000003 /* CounterStore.swift in Sources */,
+				813E7AA1503587B22A1C3CF5 /* DangCounterShared.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35CFEA3FCCACF494A4954098 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				949C1D35B80BDF31507AC28D /* DangCounterShared.swift in Sources */,
+				4F05280395D1A5D8C6FAC255 /* DangCounterWidgetBundle.swift in Sources */,
+				E486F8CC509362EBFCCE6D48 /* DangCounterWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C99796A690E495D16CAF9194 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E09F747A3180546E1F658B68 /* DangCounterWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXContainerItemProxy section */
+		7B94E685F22A6CA2AA7A1443 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = PJ0000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CBBD4D9FCA1CA72F39C89DA;
+			remoteInfo = DangCounterWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXTargetDependency section */
+		242849470FC03CCBC4398678 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6CBBD4D9FCA1CA72F39C89DA /* DangCounterWidgetExtension */;
+			targetProxy = 7B94E685F22A6CA2AA7A1443 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CFG000000000000000000001 /* Debug */ = {
@@ -188,7 +313,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -243,7 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -257,6 +382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DangCounter/DangCounter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -285,6 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DangCounter/DangCounter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -308,6 +435,56 @@
 			};
 			name = Release;
 		};
+		4BDFD462ABCB19B5D0FEA88D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = DangCounterWidget/DangCounterWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DangCounterWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Dang Counter";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nwlinux.dangcounter.DangCounterWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		730A17EB1C9E6427E24977DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = DangCounterWidget/DangCounterWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DangCounterWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Dang Counter";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nwlinux.dangcounter.DangCounterWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -325,6 +502,15 @@
 			buildConfigurations = (
 				CFG000000000000000000003 /* Debug */,
 				CFG000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B5DF7FE74B040812EC62C79 /* Build configuration list for PBXNativeTarget "DangCounterWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BDFD462ABCB19B5D0FEA88D /* Debug */,
+				730A17EB1C9E6427E24977DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
